@@ -1,0 +1,1319 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     47128,       1310]
+NotebookOptionsPosition[     46226,       1277]
+NotebookOutlinePosition[     46581,       1293]
+CellTagsIndexPosition[     46538,       1290]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "Math 456\n",
+ StyleBox["Lab #3\n", "Chapter"],
+ StyleBox["by: Julius Duthoy", "Text"]
+}], "Title",
+ CellChangeTimes->{{3.652840242018791*^9, 3.6528402556296997`*^9}, {
+   3.652840299224553*^9, 3.65284031547814*^9}, {3.652840492625431*^9, 
+   3.65284050586204*^9}, {3.652841124432557*^9, 3.652841154165947*^9}, {
+   3.652841185734034*^9, 3.652841202869761*^9}, {3.6528412523183413`*^9, 
+   3.6528412915166483`*^9}, {3.652841500792121*^9, 3.6528415474697657`*^9}, {
+   3.65284221827244*^9, 3.6528422371176987`*^9}, {3.6528422906004744`*^9, 
+   3.6528423053258038`*^9}, {3.652842382728509*^9, 3.652842390551846*^9}, {
+   3.6528427852488337`*^9, 3.6528428046703157`*^9}, 3.6528429065438232`*^9, {
+   3.6528429659249268`*^9, 3.652842971813819*^9}, {3.652843867642264*^9, 
+   3.65284391643029*^9}, {3.652843968078185*^9, 3.652843981200129*^9}, {
+   3.652844222885754*^9, 3.65284423639261*^9}, {3.6528445641925297`*^9, 
+   3.6528445927739077`*^9}, {3.652844648280279*^9, 3.6528446486780367`*^9}, {
+   3.652844731968699*^9, 3.652844748637909*^9}, {3.6528447928794947`*^9, 
+   3.6528448441579523`*^9}, {3.652845290662252*^9, 3.652845290893952*^9}, {
+   3.652845639648121*^9, 3.6528456832137823`*^9}, {3.6528457632083073`*^9, 
+   3.6528458125418253`*^9}, {3.6528954432661343`*^9, 3.652895461238954*^9}, {
+   3.6528955051855373`*^9, 3.652895510750526*^9}, {3.6528955972642403`*^9, 
+   3.652895632278303*^9}, {3.652895669745139*^9, 3.652895676544365*^9}, {
+   3.6528959008496103`*^9, 3.6528959101809473`*^9}, {3.6529221675996847`*^9, 
+   3.652922196725107*^9}, {3.658892343473493*^9, 3.658892345836339*^9}, {
+   3.658892398813347*^9, 3.658892402106135*^9}, {3.658893598612729*^9, 
+   3.6588936537862873`*^9}, 3.658894353046365*^9, {3.658894436899334*^9, 
+   3.658894476200962*^9}, {3.658894565332568*^9, 3.658894635692307*^9}, {
+   3.65889471854994*^9, 3.658894725330277*^9}, {3.6588948233626547`*^9, 
+   3.658894835098302*^9}, {3.658894966266871*^9, 3.658895003338233*^9}, {
+   3.6588951277261143`*^9, 3.658895153282213*^9}, {3.6588952704291687`*^9, 
+   3.6588952706421003`*^9}, {3.658895301635192*^9, 3.658895327274178*^9}, 
+   3.65889537618862*^9, 3.658895444052762*^9, {3.658895645317881*^9, 
+   3.658895646794188*^9}, {3.658895829644123*^9, 3.658895867050108*^9}, {
+   3.658896180452705*^9, 3.658896221010178*^9}, {3.658896298100452*^9, 
+   3.658896332194076*^9}, {3.658896393540659*^9, 3.65889642733239*^9}, {
+   3.658896499388604*^9, 3.658896501226233*^9}, {3.6588965630449657`*^9, 
+   3.658896563609334*^9}, {3.658896651564712*^9, 3.658896659810841*^9}, {
+   3.658896810453301*^9, 3.658896819729705*^9}, {3.6588968503968*^9, 
+   3.6588969463863983`*^9}, {3.658896998292965*^9, 3.658897027117029*^9}, {
+   3.65889725302942*^9, 3.658897256770937*^9}, {3.658897709388628*^9, 
+   3.6588977640341797`*^9}, {3.658897797804758*^9, 3.658897798938146*^9}, {
+   3.658898945200226*^9, 3.6588989539539623`*^9}, {3.658899121852187*^9, 
+   3.658899127262768*^9}, {3.6588992608608503`*^9, 3.65889929389756*^9}, {
+   3.658899458723901*^9, 3.6588994940727673`*^9}, {3.658899530362558*^9, 
+   3.658899574034086*^9}, {3.658899620782503*^9, 3.658899644384927*^9}, {
+   3.65889974032402*^9, 3.658899740449058*^9}, 3.6588998072829313`*^9, {
+   3.658900123459725*^9, 3.658900133402443*^9}, {3.658900169754293*^9, 
+   3.6589001700659657`*^9}, {3.658900200109136*^9, 3.6589002057774887`*^9}, {
+   3.6589002523258467`*^9, 3.658900304412469*^9}, 3.658929216917605*^9, 
+   3.6589812146599817`*^9, {3.658981409972109*^9, 3.6589814138076982`*^9}, {
+   3.65898146273882*^9, 3.658981472705084*^9}, {3.658981512282935*^9, 
+   3.658981532471895*^9}, {3.658981579515992*^9, 3.658981634410428*^9}, {
+   3.658981799747122*^9, 3.658981849144766*^9}, {3.658982216067313*^9, 
+   3.658982219036643*^9}, {3.659038548635701*^9, 3.659038614158805*^9}}],
+
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{"General", " ", "Bifiurcation", " ", "Diagram"}], 
+  "Section"], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"a_", ",", "x_"}], "]"}], "=", 
+   RowBox[{"a", "*", "x", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", "x"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"k", ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "1", ",", "4", ",", "0.001"}], "}"}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"orb", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0"}], "}"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"L", "=", 
+     RowBox[{"NestList", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"f", "[", 
+         RowBox[{
+          RowBox[{"a", "[", 
+           RowBox[{"[", "k", "]"}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
+       "0.5", ",", "300"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Do", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"orb", "=", 
+       RowBox[{"Append", "[", 
+        RowBox[{"orb", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", "[", 
+            RowBox[{"[", "k", "]"}], "]"}], ",", 
+           RowBox[{"L", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "200", ",", "300"}], "}"}]}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", "1", ",", 
+     RowBox[{"Length", "[", "a", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}], "\n", 
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"orb", ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Large"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.652840242018791*^9, 3.6528402556296997`*^9}, {
+   3.652840299224553*^9, 3.65284031547814*^9}, {3.652840492625431*^9, 
+   3.65284050586204*^9}, {3.652841124432557*^9, 3.652841154165947*^9}, {
+   3.652841185734034*^9, 3.652841202869761*^9}, {3.6528412523183413`*^9, 
+   3.6528412915166483`*^9}, {3.652841500792121*^9, 3.6528415474697657`*^9}, {
+   3.65284221827244*^9, 3.6528422371176987`*^9}, {3.6528422906004744`*^9, 
+   3.6528423053258038`*^9}, {3.652842382728509*^9, 3.652842390551846*^9}, {
+   3.6528427852488337`*^9, 3.6528428046703157`*^9}, 3.6528429065438232`*^9, {
+   3.6528429659249268`*^9, 3.652842971813819*^9}, {3.652843867642264*^9, 
+   3.65284391643029*^9}, {3.652843968078185*^9, 3.652843981200129*^9}, {
+   3.652844222885754*^9, 3.65284423639261*^9}, {3.6528445641925297`*^9, 
+   3.6528445927739077`*^9}, {3.652844648280279*^9, 3.6528446486780367`*^9}, {
+   3.652844731968699*^9, 3.652844748637909*^9}, {3.6528447928794947`*^9, 
+   3.6528448441579523`*^9}, {3.652845290662252*^9, 3.652845290893952*^9}, {
+   3.652845639648121*^9, 3.6528456832137823`*^9}, {3.6528457632083073`*^9, 
+   3.6528458125418253`*^9}, {3.6528954432661343`*^9, 3.652895461238954*^9}, {
+   3.6528955051855373`*^9, 3.652895510750526*^9}, {3.6528955972642403`*^9, 
+   3.652895632278303*^9}, {3.652895669745139*^9, 3.652895676544365*^9}, {
+   3.6528959008496103`*^9, 3.6528959101809473`*^9}, {3.6529221675996847`*^9, 
+   3.652922196725107*^9}, {3.658892343473493*^9, 3.658892345836339*^9}, {
+   3.658892398813347*^9, 3.658892402106135*^9}, {3.658893598612729*^9, 
+   3.6588936537862873`*^9}, 3.658894353046365*^9, {3.658894436899334*^9, 
+   3.658894476200962*^9}, {3.658894565332568*^9, 3.658894635692307*^9}, {
+   3.65889471854994*^9, 3.658894725330277*^9}, {3.6588948233626547`*^9, 
+   3.658894835098302*^9}, {3.658894966266871*^9, 3.658895003338233*^9}, {
+   3.6588951277261143`*^9, 3.658895153282213*^9}, {3.6588952704291687`*^9, 
+   3.6588952706421003`*^9}, {3.658895301635192*^9, 3.658895327274178*^9}, 
+   3.65889537618862*^9, 3.658895444052762*^9, {3.658895645317881*^9, 
+   3.658895646794188*^9}, {3.658895829644123*^9, 3.658895867050108*^9}, {
+   3.658896180452705*^9, 3.658896221010178*^9}, {3.658896298100452*^9, 
+   3.658896332194076*^9}, {3.658896393540659*^9, 3.65889642733239*^9}, {
+   3.658896499388604*^9, 3.658896501226233*^9}, {3.6588965630449657`*^9, 
+   3.658896563609334*^9}, {3.658896651564712*^9, 3.658896659810841*^9}, {
+   3.658896810453301*^9, 3.658896819729705*^9}, {3.6588968503968*^9, 
+   3.6588969463863983`*^9}, {3.658896998292965*^9, 3.658897027117029*^9}, {
+   3.65889725302942*^9, 3.658897256770937*^9}, {3.658897709388628*^9, 
+   3.6588977640341797`*^9}, {3.658897797804758*^9, 3.658897798938146*^9}, {
+   3.658898945200226*^9, 3.6588989539539623`*^9}, {3.658899121852187*^9, 
+   3.658899127262768*^9}, {3.6588992608608503`*^9, 3.65889929389756*^9}, {
+   3.658899458723901*^9, 3.6588994940727673`*^9}, {3.658899530362558*^9, 
+   3.658899574034086*^9}, {3.658899620782503*^9, 3.658899644384927*^9}, {
+   3.65889974032402*^9, 3.658899740449058*^9}, 3.6588998072829313`*^9, {
+   3.658900123459725*^9, 3.658900133402443*^9}, {3.658900169754293*^9, 
+   3.6589001700659657`*^9}, {3.658900200109136*^9, 3.6589002057774887`*^9}, {
+   3.6589002523258467`*^9, 3.658900304412469*^9}, 3.658929216917605*^9, 
+   3.6589812146599817`*^9, {3.658981409972109*^9, 3.6589814138076982`*^9}, {
+   3.65898146273882*^9, 3.658981472705084*^9}, {3.658981512282935*^9, 
+   3.658981532471895*^9}, {3.658981579515992*^9, 3.658981634410428*^9}, {
+   3.658981799747122*^9, 3.658981849144766*^9}, {3.658982216067313*^9, 
+   3.658982219036643*^9}, {3.659038548635701*^9, 3.659038555198225*^9}, {
+   3.65903862307934*^9, 3.659038653933227*^9}}],
+
+Cell[BoxData[""], "Input", "Input",
+ CellChangeTimes->{{3.658981861242159*^9, 3.6589818740737057`*^9}, 
+   3.659070111231903*^9, 3.659070246449314*^9}],
+
+Cell[BoxData[{
+ StyleBox[
+  StyleBox[
+   RowBox[{"Problem", "  ", "#1"}], "Section"],
+  FontWeight->"Plain"], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"An", " ", "attracting", " ", "4"}], "-", 
+      RowBox[{
+      "cycle", " ", "occurs", " ", "where", " ", "the", " ", "curve", " ", 
+       "splits", " ", "from", " ", "2", " ", "branches", " ", "into", " ", 
+       "4", " ", 
+       RowBox[{"branches", ".", " ", "By"}], " ", "zooming", " ", "in", " ", 
+       "on", " ", "our", " ", "diagram", " ", "we", " ", "see", " ", "that", 
+       " ", "this", " ", "occurs", " ", "just", " ", "before", " ", "a"}]}], 
+     "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"3.45", ".", "This"}], " ", "branching", " ", "indicates", 
+        " ", "a", " ", "4"}], "-", 
+       RowBox[{
+       "cycle", " ", "because", " ", "it", " ", "implies", " ", "that", " ", 
+        "for", " ", "our", " ", "orbit", " ", "of", " ", "x"}]}], "=", 
+      "0.5"}]}], "Text",
+    FontColor->GrayLevel[0]], 
+   StyleBox[",", "Text"], 
+   StyleBox[" ", "Text"], 
+   StyleBox[
+    RowBox[{
+    "it", " ", "iterates", " ", "through", " ", "a", " ", "set", " ", "of", 
+     " ", "4", " ", 
+     RowBox[{"points", ".", " "}]}], "Text",
+    FontColor->GrayLevel[0]]}],
+  FontWeight->"Plain",
+  FontColor->GrayLevel[0]]}], "Input",
+ CellChangeTimes->{{3.6528411316778183`*^9, 3.652841183085651*^9}, {
+   3.652846060390226*^9, 3.6528460615016937`*^9}, {3.652891920889244*^9, 
+   3.6528919250953827`*^9}, {3.652892675802011*^9, 3.652892677263588*^9}, 
+   3.652895435880911*^9, 3.658981937534997*^9, {3.658981968522716*^9, 
+   3.658981968960969*^9}, {3.6589820201053343`*^9, 3.658982053704179*^9}, {
+   3.6589822253385553`*^9, 3.65898223060858*^9}, {3.659038716651338*^9, 
+   3.659038746673317*^9}, {3.6590405676499853`*^9, 3.659040572542329*^9}},
+ NumberMarks->False],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\[IndentingNewLine]", "Section"], 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"a_", ",", "x_"}], "]"}], "=", 
+     RowBox[{"a", "*", "x", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "x"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"a", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{"k", ",", 
+       RowBox[{"{", 
+        RowBox[{"k", ",", "3.35", ",", "3.55", ",", "0.001"}], "}"}]}], 
+      "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"orb", "=", 
+     RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Do", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"L", "=", 
+       RowBox[{"NestList", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"f", "[", 
+           RowBox[{
+            RowBox[{"a", "[", 
+             RowBox[{"[", "k", "]"}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
+         "0.5", ",", "300"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Do", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"orb", "=", 
+         RowBox[{"Append", "[", 
+          RowBox[{"orb", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"a", "[", 
+              RowBox[{"[", "k", "]"}], "]"}], ",", 
+             RowBox[{"L", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "200", ",", "300"}], "}"}]}], "]"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "1", ",", 
+       RowBox[{"Length", "[", "a", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+    "]"}], "\n", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"orb", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.6528411316778183`*^9, 3.652841183085651*^9}, {
+   3.652846060390226*^9, 3.6528460615016937`*^9}, {3.652891920889244*^9, 
+   3.6528919250953827`*^9}, {3.652892675802011*^9, 3.652892677263588*^9}, 
+   3.652895435880911*^9, 3.658981937534997*^9, {3.658981968522716*^9, 
+   3.658981968960969*^9}, {3.6589820201053343`*^9, 3.658982053704179*^9}, {
+   3.6589822253385553`*^9, 3.65898223060858*^9}, {3.659038716651338*^9, 
+   3.659038746673317*^9}, {3.6590405676499853`*^9, 3.659040572542329*^9}},
+ NumberMarks->False],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.659038759168702*^9, 3.659038759225017*^9}, {
+   3.659038857472196*^9, 3.6590388809393663`*^9}, {3.659038916773992*^9, 
+   3.659038942059452*^9}, 3.65907021935909*^9}],
+
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{"Problem", " ", "#2"}], "Section",
+  FontWeight->"Plain"], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{
+   RowBox[{
+   "From", " ", "the", " ", "general", " ", "bifurcation", " ", "diagram", 
+    " ", 
+    StyleBox[
+     RowBox[{
+      StyleBox["i", "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox[
+        StyleBox["t", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["i", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox[
+        StyleBox["s", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["d", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "ifficult"}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["t", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox[
+        StyleBox["o", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["t", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "el", 
+      StyleBox[
+       StyleBox[
+        StyleBox["l", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["w", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "here"}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["t", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "he"}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["v", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "ertica", 
+      StyleBox[
+       StyleBox[
+        StyleBox["l", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["s", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "plit", 
+      StyleBox[
+       StyleBox[
+        StyleBox["s", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["b", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "egin"}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox[
+        StyleBox["e", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "xactly"}]], 
+     StyleBox[
+      StyleBox[
+       StyleBox[".", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox["  ", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox[
+      RowBox[{
+       StyleBox[
+        StyleBox[
+         StyleBox["F", "Text",
+          FontWeight->"Plain",
+          FontColor->GrayLevel[0]], "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "irst"}]]}], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["w", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox[
+        StyleBox["e", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["z", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "oo", 
+      StyleBox[
+       StyleBox[
+        StyleBox["m", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["i", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox[
+        StyleBox["n", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["w", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "here"}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["m", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "os", 
+      StyleBox[
+       StyleBox[
+        StyleBox["t", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["o", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox[
+        StyleBox["f", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["t", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "he"}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["b", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "ifucrcations"}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox[
+        StyleBox["b", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "egin"}]], 
+     StyleBox[
+      StyleBox[
+       StyleBox[".", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox["  ", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox[
+      RowBox[{
+       StyleBox[
+        StyleBox[
+         StyleBox["O", "Text",
+          FontWeight->"Plain",
+          FontColor->GrayLevel[0]], "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], 
+       StyleBox[
+        StyleBox[
+         StyleBox[
+          StyleBox["n", "Text",
+           FontWeight->"Plain",
+           FontColor->GrayLevel[0]], "Text",
+          FontWeight->"Plain",
+          FontColor->GrayLevel[0]], "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]]}]]}], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["t", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "he"}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["i", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "nterva", 
+      StyleBox[
+       StyleBox[
+        StyleBox["l", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["f", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "ro", 
+      StyleBox[
+       StyleBox[
+        StyleBox["m", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox["3.", "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox["5", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["t", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox[
+        StyleBox["o", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox["4.", "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox["0", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["i", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox[
+        StyleBox["t", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["i", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox[
+        StyleBox["s", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["e", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "as", 
+      StyleBox[
+       StyleBox[
+        StyleBox["y", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["t", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       StyleBox[
+        StyleBox["o", "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]]}]], 
+    StyleBox[" ", "Text",
+     FontWeight->"Plain",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      StyleBox[
+       StyleBox["s", "Text",
+        FontWeight->"Plain",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "ee"}]], " ", "that", " ", "the", " ", 
+    "empty", " ", "vertical", " ", "strip", " ", "occurs", " ", "on", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3.8", ",", "3.9"}], ")"}], ".", "  ", "However"}]}], ",", " ", 
+   
+   RowBox[{
+    RowBox[{
+    "upon", " ", "zooming", " ", "into", " ", "this", " ", "region", " ", 
+     "we", " ", "see", " ", "that", " ", "it", " ", "is", " ", "not", " ", 
+     RowBox[{"empty", ".", " ", "From"}], " ", "3.828", " ", "to", " ", 
+     "3.842", " ", "there", " ", "is", " ", "only", " ", "a", " ", "period", 
+     " ", "3"}], "-", 
+    RowBox[{"cycle", " ", "that", " ", 
+     RowBox[{"remains", ".", " ", "After"}], " ", "3.842", " ", "it", " ", 
+     "appears", " ", "that", " ", "there", " ", "is", " ", "a", " ", "period",
+      " ", "5", " ", "cycle", " ", "for", " ", "a", " ", "short", " ", "time",
+      " ", "before", " ", "another", " ", "bifurcation", " ", 
+     RowBox[{"occurs", ".", " "}]}]}]}], "Text",
+  FontWeight->"Plain",
+  FontColor->GrayLevel[0]]}], "Input",
+ CellChangeTimes->{{3.658934903594467*^9, 3.658934918367523*^9}, 
+   3.658981881576254*^9, {3.658982071679208*^9, 3.658982086696863*^9}, {
+   3.65898225097019*^9, 3.658982254712453*^9}, {3.658982319548102*^9, 
+   3.6589823314963703`*^9}, {3.658982379603548*^9, 3.6589823841147213`*^9}, {
+   3.6590393134181633`*^9, 3.659039357102026*^9}, {3.659040508770138*^9, 
+   3.659040509682971*^9}, 3.659040540844985*^9, {3.659062031002001*^9, 
+   3.6590620915225763`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"a_", ",", "x_"}], "]"}], "=", 
+   RowBox[{"a", "*", "x", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", "x"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"k", ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "3.5", ",", "4.0", ",", "0.001"}], "}"}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"orb", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"L", "=", 
+     RowBox[{"NestList", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"f", "[", 
+         RowBox[{
+          RowBox[{"a", "[", 
+           RowBox[{"[", "k", "]"}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
+       "0.5", ",", "300"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Do", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"orb", "=", 
+       RowBox[{"Append", "[", 
+        RowBox[{"orb", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", "[", 
+            RowBox[{"[", "k", "]"}], "]"}], ",", 
+           RowBox[{"L", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "200", ",", "300"}], "}"}]}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", "1", ",", 
+     RowBox[{"Length", "[", "a", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}], "\n", 
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"orb", ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.658934903594467*^9, 3.658934918367523*^9}, 
+   3.658981881576254*^9, {3.658982071679208*^9, 3.658982086696863*^9}, {
+   3.65898225097019*^9, 3.658982254712453*^9}, {3.658982319548102*^9, 
+   3.6589823314963703`*^9}, {3.658982379603548*^9, 3.6589823841147213`*^9}, {
+   3.6590393134181633`*^9, 3.659039357102026*^9}, {3.659040508770138*^9, 
+   3.659040509682971*^9}, 3.659040540844985*^9, {3.659062006557033*^9, 
+   3.659062024899126*^9}, 3.659068515438569*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"a_", ",", "x_"}], "]"}], "=", 
+   RowBox[{"a", "*", "x", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", "x"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"k", ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "3.8", ",", "3.9", ",", "0.0001"}], "}"}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"orb", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"L", "=", 
+     RowBox[{"NestList", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"f", "[", 
+         RowBox[{
+          RowBox[{"a", "[", 
+           RowBox[{"[", "k", "]"}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
+       "0.5", ",", "300"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Do", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"orb", "=", 
+       RowBox[{"Append", "[", 
+        RowBox[{"orb", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", "[", 
+            RowBox[{"[", "k", "]"}], "]"}], ",", 
+           RowBox[{"L", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "200", ",", "300"}], "}"}]}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", "1", ",", 
+     RowBox[{"Length", "[", "a", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}], "\n", 
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"orb", ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.658934903594467*^9, 3.658934918367523*^9}, 
+   3.658981881576254*^9, {3.658982071679208*^9, 3.658982086696863*^9}, {
+   3.65898225097019*^9, 3.658982254712453*^9}, {3.658982319548102*^9, 
+   3.6589823314963703`*^9}, {3.658982379603548*^9, 3.6589823841147213`*^9}, {
+   3.6590393134181633`*^9, 3.659039357102026*^9}, {3.659040508770138*^9, 
+   3.659040509682971*^9}, 3.659040540844985*^9, 3.659062006557033*^9}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Problem #3\n",
+ StyleBox["From problem #2 we saw that there was an attracting period 3 cycle \
+on the interval of a=(3.828,3.842). To see if this persists for other \
+vertical strips that appear when we zoom closer, let us look at the interval \
+(3.72,3.76). On this interval we have a period 5-cycle but not another cycle \
+of period 3. We will discuss this more in the next problem.", "Text",
+  FontColor->GrayLevel[0]]
+}], "Section",
+ CellChangeTimes->{{3.658934903594467*^9, 3.658934918367523*^9}, 
+   3.658981881576254*^9, {3.658982071679208*^9, 3.658982086696863*^9}, {
+   3.65898225097019*^9, 3.658982254712453*^9}, {3.658982319548102*^9, 
+   3.6589823314963703`*^9}, {3.658982379603548*^9, 3.6589823841147213`*^9}, {
+   3.6590393134181633`*^9, 3.659039357102026*^9}, {3.65903944614375*^9, 
+   3.6590395076791477`*^9}, {3.6590396872807293`*^9, 3.659039827430407*^9}, {
+   3.659039932883072*^9, 3.659039940495429*^9}, {3.659040008345682*^9, 
+   3.6590400799829187`*^9}, {3.659040605592794*^9, 3.659040607430962*^9}, 
+   3.659040679963279*^9, {3.659040841846822*^9, 3.6590409013430853`*^9}, {
+   3.659044106259618*^9, 3.659044141463172*^9}}],
+
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"a_", ",", "x_"}], "]"}], "=", 
+    RowBox[{"a", "*", "x", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "x"}], ")"}]}]}], ";"}], "Input"], "\n", 
+ StyleBox[
+  RowBox[{
+   RowBox[{"a", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{"k", ",", 
+      RowBox[{"{", 
+       RowBox[{"k", ",", "3.72", ",", "3.76", ",", "0.0001"}], "}"}]}], 
+     "]"}]}], ";"}], "Input"], "\n", 
+ StyleBox[
+  RowBox[{
+   RowBox[{"k", "=", "1"}], ";"}], "Input"], "\n", 
+ StyleBox[
+  RowBox[{
+   RowBox[{"orb", "=", 
+    RowBox[{"{", "}"}]}], ";"}], "Input"], "\n", 
+ StyleBox[
+  RowBox[{"Do", "[", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"L", "=", 
+      RowBox[{"NestList", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"f", "[", 
+          RowBox[{
+           RowBox[{"a", "[", 
+            RowBox[{"[", "k", "]"}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
+        "0.5", ",", "300"}], "]"}]}], ";", "\n", 
+     RowBox[{"Do", "[", "\n", 
+      RowBox[{
+       RowBox[{"orb", "=", 
+        RowBox[{"Append", "[", 
+         RowBox[{"orb", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"a", "[", 
+             RowBox[{"[", "k", "]"}], "]"}], ",", 
+            RowBox[{"L", "[", 
+             RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "200", ",", "300"}], "}"}]}], "]"}]}], ",", "\n", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", 
+      RowBox[{"Length", "[", "a", "]"}]}], "}"}]}], "\n", "]"}], 
+  "Input"], "\n", 
+ StyleBox[
+  RowBox[{"ListPlot", "[", 
+   RowBox[{"orb", ",", 
+    RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}], "Input"]}], "Input",
+ CellChangeTimes->{{3.658934903594467*^9, 3.658934918367523*^9}, 
+   3.658981881576254*^9, {3.658982071679208*^9, 3.658982086696863*^9}, {
+   3.65898225097019*^9, 3.658982254712453*^9}, {3.658982319548102*^9, 
+   3.6589823314963703`*^9}, {3.658982379603548*^9, 3.6589823841147213`*^9}, {
+   3.6590393134181633`*^9, 3.659039357102026*^9}, {3.65903944614375*^9, 
+   3.6590395076791477`*^9}, {3.6590396872807293`*^9, 3.659039827430407*^9}, {
+   3.659039932883072*^9, 3.659039940495429*^9}, {3.659040008345682*^9, 
+   3.6590400799829187`*^9}, {3.659040605592794*^9, 3.659040607430962*^9}, {
+   3.659040679963279*^9, 3.6590406817527323`*^9}, {3.659040755395303*^9, 
+   3.659040755409973*^9}, {3.659040834016425*^9, 3.6590408372634*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Problem #4\n",
+ StyleBox["The powers of 2-cycles stop occuring when the first vertical strip \
+occurs on the interval (3.56,3.6). Zooming in on this strip shows us that \
+each of the orbits gives rise to odd cycles. Essentially, each even cycle \
+continues to branch into 2 more branches until the interval between branches \
+becomes so small that they coincide. This occurs until Sharkovskii\
+\[CloseCurlyQuote]s ordering takes place in reverse order (from 1, 2, \
+2^2,...2*7,...,3).  ", "Text",
+  FontColor->GrayLevel[0]]
+}], "Section",
+ CellChangeTimes->{{3.658934903594467*^9, 3.658934918367523*^9}, 
+   3.658981881576254*^9, {3.658982071679208*^9, 3.658982086696863*^9}, {
+   3.65898225097019*^9, 3.658982254712453*^9}, {3.658982319548102*^9, 
+   3.6589823314963703`*^9}, {3.658982379603548*^9, 3.658982408923377*^9}, {
+   3.658982603660553*^9, 3.658982603880557*^9}, {3.6589827516893063`*^9, 
+   3.6589827519286747`*^9}, {3.658982798623664*^9, 3.658982801920573*^9}, {
+   3.658982846867877*^9, 3.658982847947041*^9}, {3.658982912946241*^9, 
+   3.65898292668862*^9}, {3.659040908344924*^9, 3.659040935670776*^9}, {
+   3.6590410150648947`*^9, 3.659041052998952*^9}, {3.6590412038173437`*^9, 
+   3.659041408991269*^9}, 3.659041518833291*^9, 3.65906831018983*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"a_", ",", "x_"}], "]"}], "=", 
+   RowBox[{"a", "*", "x", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", "x"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"k", ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "3.56", ",", "3.6", ",", "0.0001"}], "}"}]}], "]"}]}],
+   ";"}], "\n", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"orb", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"L", "=", 
+     RowBox[{"NestList", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"f", "[", 
+         RowBox[{
+          RowBox[{"a", "[", 
+           RowBox[{"[", "k", "]"}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
+       "0.5", ",", "300"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Do", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"orb", "=", 
+       RowBox[{"Append", "[", 
+        RowBox[{"orb", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", "[", 
+            RowBox[{"[", "k", "]"}], "]"}], ",", 
+           RowBox[{"L", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "200", ",", "300"}], "}"}]}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", "1", ",", 
+     RowBox[{"Length", "[", "a", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}], "\n", 
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"orb", ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.658934903594467*^9, 3.658934918367523*^9}, 
+   3.658981881576254*^9, {3.658982071679208*^9, 3.658982086696863*^9}, {
+   3.65898225097019*^9, 3.658982254712453*^9}, {3.658982319548102*^9, 
+   3.6589823314963703`*^9}, {3.658982379603548*^9, 3.658982408923377*^9}, {
+   3.658982603660553*^9, 3.658982603880557*^9}, {3.6589827516893063`*^9, 
+   3.6589827519286747`*^9}, {3.658982798623664*^9, 3.658982801920573*^9}, {
+   3.658982846867877*^9, 3.658982847947041*^9}, {3.658982912946241*^9, 
+   3.65898292668862*^9}, {3.659040908344924*^9, 3.659040917907608*^9}, 
+   3.659061311724585*^9, 3.6590619245814*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"a_", ",", "x_"}], "]"}], "=", 
+   RowBox[{"a", "*", "x", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", "x"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"k", ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "3.72", ",", "3.76", ",", "0.0001"}], "}"}]}], 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"orb", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"L", "=", 
+     RowBox[{"NestList", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"f", "[", 
+         RowBox[{
+          RowBox[{"a", "[", 
+           RowBox[{"[", "k", "]"}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
+       "0.5", ",", "300"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Do", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"orb", "=", 
+       RowBox[{"Append", "[", 
+        RowBox[{"orb", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", "[", 
+            RowBox[{"[", "k", "]"}], "]"}], ",", 
+           RowBox[{"L", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "200", ",", "300"}], "}"}]}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", "1", ",", 
+     RowBox[{"Length", "[", "a", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}], "\n", 
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"orb", ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.658934903594467*^9, 3.658934918367523*^9}, 
+   3.658981881576254*^9, {3.658982071679208*^9, 3.658982086696863*^9}, {
+   3.65898225097019*^9, 3.658982254712453*^9}, {3.658982319548102*^9, 
+   3.6589823314963703`*^9}, {3.658982379603548*^9, 3.658982408923377*^9}, {
+   3.658982603660553*^9, 3.658982603880557*^9}, {3.6589827516893063`*^9, 
+   3.6589827519286747`*^9}, {3.658982798623664*^9, 3.658982801920573*^9}, {
+   3.658982846867877*^9, 3.658982847947041*^9}, {3.658982912946241*^9, 
+   3.65898292668862*^9}, {3.659040908344924*^9, 3.659040917907608*^9}, 
+   3.659061311724585*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{838, 692},
+WindowMargins->{{Automatic, 170}, {29, Automatic}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 29, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3822, 54, 155, "Title"],
+Cell[4405, 78, 5627, 109, 250, "Input"],
+Cell[10035, 189, 151, 2, 28, "Input"],
+Cell[10189, 193, 1912, 46, 114, "Input"],
+Cell[12104, 241, 2446, 64, 250, "Input"],
+Cell[14553, 307, 215, 3, 28, "Input"],
+Cell[14771, 312, 17554, 598, 148, "Input"],
+Cell[32328, 912, 2167, 59, 199, "Input"],
+Cell[34498, 973, 2118, 58, 199, "Input"],
+Cell[CellGroupData[{
+Cell[36641, 1035, 1164, 18, 121, "Section"],
+Cell[37808, 1055, 2457, 67, 199, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40302, 1127, 1283, 20, 140, "Section"],
+Cell[41588, 1149, 2312, 61, 199, "Input"],
+Cell[43903, 1212, 2295, 61, 199, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
